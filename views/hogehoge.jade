@@ -8,23 +8,30 @@ div#wrapper
         div.pickup
           p#bigscreen
             a(href="javascript:void(0);")
-              img.pickupImg(height="358",width="298",alt="#{list[0].data}",src="#{list[0].name}")
+              - if (!list[0])
+                img.pickupImg(height="358",width="298",alt="ダミー画像",src="/images/img_05.png")
+              - else
+                img.pickupImg(height="358",width="298",alt="#{list[0].data}",src="#{list[0].name}")
       div.contMainInner02
         div.productData
           p.productDataTitle
             img(height="26",width="380",alt="productdata",src="/images/txt_productdata.png")
           div.dataBox
-            p#info=list[0].data
+            - if (!list[0])
+              p#info 下部のアイコンで再計測してくだちい
+            - else
+              p#info=list[0].data
         p.yourData your data is <br /> shoulders:100cm
     div.contBottom
       p.left
         a#left(href="javascript:void(0);") prev
       div.slider#listbox
         ul#list
-          -each photos in list
-            li.list
-              a(href="javascript:void(0);")
-                img.thumbImg(height="154",width="128",alt="#{photos.data}",src="#{photos.name}")
+          - if (list[0])
+            -each photos in list
+              li.list
+                a(href="javascript:void(0);")
+                  img.thumbImg(height="154",width="128",alt="#{photos.data}",src="#{photos.name}")
       p.right
         a#right(href="javascript:void(0);") next
   div#footer
