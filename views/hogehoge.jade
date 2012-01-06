@@ -8,13 +8,13 @@ div#wrapper
         div.pickup
           p#bigscreen
             a(href="javascript:void(0);")
-              img.pickupImg(height="358",width="298",alt="",src="/images/img_00.png")
+              img.pickupImg(height="358",width="298",alt="#{list[0].data}",src="#{list[0].name}")
       div.contMainInner02
         div.productData
           p.productDataTitle
             img(height="26",width="380",alt="productdata",src="/images/txt_productdata.png")
           div.dataBox
-            p#info
+            p#info=list[0].data
         p.yourData your data is <br /> shoulders:100cm
     div.contBottom
       p.left
