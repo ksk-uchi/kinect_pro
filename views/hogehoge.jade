@@ -1,0 +1,32 @@
+div#wrapper
+  div#wrapperInner
+    div#header
+      h1
+        img(height="158",width="900",alt="[REAL CLOTHES DAYS]KINECT PROJECT",src="/images/logo.png")
+    div.contMain
+      div.contMainInner01
+        div.pickup
+          p#bigscreen
+            a(href="javascript:void(0);")
+              img.pickupImg(height="358",width="298",alt="",src="/images/img_00.png")
+      div.contMainInner02
+        div.productData
+          p.productDataTitle
+            img(height="26",width="380",alt="productdata",src="/images/txt_productdata.png")
+          div.dataBox
+            p#info
+        p.yourData your data is <br /> shoulders:100cm
+    div.contBottom
+      p.left
+        a#left(href="javascript:void(0);") prev
+      div.slider#listbox
+        ul#list
+          -each photos in list
+            li.list
+              a(href="javascript:void(0);")
+                img.thumbImg(height="154",width="128",alt="#{photos.data}",src="#{photos.name}")
+      p.right
+        a#right(href="javascript:void(0);") next
+  div#footer
+    p
+      a(href="javascript:void(0);") cam
