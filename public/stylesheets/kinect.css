@@ -22,7 +22,7 @@ img {
 }
 /*index*/
 #indexWrapper{
-	background: url("/images/bg_index.png") repeat-x 0 0;
+	background: url("../images/bg_index.png") repeat-x 0 0;
 }
 #indexWrapperInner{
 	width: 900px;
@@ -45,14 +45,21 @@ img {
 	text-indent: -9999px; /* テキストを隠す */  
 	text-decoration: none;  
 	display: block;  
-	background: url("/images/btn_index.png") no-repeat;
+	background: url("../images/btn_index.png") no-repeat;
 }
 #indexWrapperInner p a:active{
-	background: -145px 0 url("/images/btn_index.png") no-repeat;	
+	background: -145px 0 url("../images/btn_index.png") no-repeat;	
 }
+#indexWrapper .message {
+    text-align: center;
+    color: #C30;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 /*---header---*/
 #wrapper{
-	background: url("/images/bg_header.png") repeat-x 0 0;
+	background: url("../images/bg_header.png") repeat-x 0 0;
 }
 #wrapperInner {
 	width: 900px;
@@ -113,14 +120,29 @@ img {
 	top: 0;
 	left: 0;
 }
-.yourData {
-	width: 145px;
-	height: 80px;
-	background: url("/images/bg_yourdata.png") no-repeat 0 0;
+.dataWrap {
+	width: 180px;
 	float: right;
-	font-size: 75%;
+}
+.clothData,
+.yourData {
+	height: 39px;
+	font-size: 70%;
 	color: #666666;
-	padding-left: 20px;
+	padding-left: 40px;
+	line-height:140%;
+}
+.yourData {
+	background: url("../images/bg_yourdata.png") no-repeat 0 0;
+	margin-bottom: 10px;
+}
+.clothData {
+	background: url("../images/bg_clothdata.png") no-repeat 0 0;
+}
+.dataWrap span{
+	font-weight: bold;
+	color:#000000;	
+	font-size:120%;
 }
 /*contBottom*/
 .contBottom {
@@ -143,10 +165,10 @@ img {
 	text-indent: -9999px; /* テキストを隠す */  
 	text-decoration: none;  
 	display: block;  
-	background: url("/images/btn_bottom_left.png") no-repeat;
+	background: url("../images/btn_bottom_left.png") no-repeat;
 }
 .contBottom p.left a:active {
-	background: -34px 0 url("/images/btn_bottom_left.png") no-repeat;	
+	background: -34px 0 url("../images/btn_bottom_left.png") no-repeat;	
 }
 .contBottom p.right a {
 	width: 34px;
@@ -154,10 +176,10 @@ img {
 	text-indent: -9999px; /* テキストを隠す */  
 	text-decoration: none;  
 	display: block;  
-	background: url("/images/btn_bottom_right.png") no-repeat;
+	background: url("../images/btn_bottom_right.png") no-repeat;
 }
 .contBottom p.right a:active {
-	background: -34px 0 url("/images/btn_bottom_right.png") no-repeat;	
+	background: -34px 0 url("../images/btn_bottom_right.png") no-repeat;	
 }
 .contBottom p.left {
 	margin-right: 16px;
@@ -216,10 +238,10 @@ img {
 	text-indent: -9999px; /* テキストを隠す */  
 	text-decoration: none;  
 	display: block;  
-	background: url("/images/btn_camm.png") no-repeat;
+	background: url("../images/btn_camm.png") no-repeat;
 }
 #footer p a:active{
-	background:-80px 0 url("/images/btn_camm.png") no-repeat;	
+	background:-80px 0 url("../images/btn_camm.png") no-repeat;	
 }
 
 /*clearfix*/

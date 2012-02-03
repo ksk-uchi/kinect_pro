@@ -9,7 +9,7 @@ div#wrapper
           p#bigscreen
             a(href="javascript:void(0);")
               - if (!list[0])
-                img.pickupImg(height="358",width="298",alt="ダミー画像",src="/images/img_05.png")
+                img.pickupImg(height="358",width="298",alt="申し訳ありません。データを見つける事が出来ませんでした。",src="/images/img_nodata.png")
               - else
                 img.pickupImg(height="358",width="298",alt="#{list[0].data}",src="#{list[0].name}")
       div.contMainInner02
@@ -21,7 +21,11 @@ div#wrapper
               p#info 下部のアイコンで再計測してくだちい
             - else
               p#info=list[0].data
-        p.yourData your data is <br /> shoulders:100cm
+        div.dataWrap
+            p.yourData Your shoulder width is <br />
+                span 42cm
+            p.clothData The number of clothes is <br />
+                span #{num}
     div.contBottom
       p.left
         a#left(href="javascript:void(0);") prev
@@ -32,8 +36,11 @@ div#wrapper
               li.list
                 a(href="javascript:void(0);")
                   img.thumbImg(height="154",width="128",alt="#{photos.data}",src="#{photos.name}")
+          - else
+            li
+              img.thumbImg(height="154",width="776",alt="",src="/images/txt_nodata.png")
       p.right
         a#right(href="javascript:void(0);") next
   div#footer
     p
-      a(href="javascript:void(0);") cam
+      a(href="/hogehoge") cam

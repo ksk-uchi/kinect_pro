@@ -4,22 +4,18 @@
  */
 
 exports.index = function(req, res){
-  var num = "";
-  // NAMEパラメタが空でなければ画面に表示
-  if (req.query.num) {
-    // postデータはreq.body.xxxで受け取る
-    num = req.query.num;
-  }
-
-  var arr = require('./test.js');
-  var list = arr.photos;
-  var ddd = parseInt(Math.random()*100) + 0;
-  res.render('hogehoge', { title: 'Express',
-                           date: new Date().getFullYear(),
-                           num: num,
-                           list: list,
-                           rand: ddd
-                         });
+  res.render('index', {item: 'search'});
 };
 
-
+exports.hogehoge = function(req, res){
+  var arr = require('./test.js');
+  var list = arr.photos;
+  var num = list.length;
+  if(req.query.first && num == 0){
+    res.render('index', {item: 'noitem'});
+  } else {
+    res.render('hogehoge', { num: num,
+                             list: list
+                            });
+  }
+};
